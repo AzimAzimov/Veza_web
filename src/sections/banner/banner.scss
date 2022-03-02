@@ -1,0 +1,178 @@
+.banner {
+  width: 100%;
+  height: auto;
+  @include backgroundImage(cover);
+  background-image: url('../assets/images/banner.png'); 
+  margin: 88px auto 130px;
+
+  @include tabletScreen {
+    margin: 75px auto 100px;
+    width: 100%;
+    height: auto;
+    @include backgroundImage(cover);
+    background-image: url('../assets/images/banner__ipad.png'); 
+  }
+
+  @include phoneScreen {
+    width: 100%;
+    height: auto;
+    @include backgroundImage(cover);
+    background-image: url('../assets/images/banner__phone.png'); 
+    margin: 70px auto 80px;
+  }
+
+  @include SEScreen {
+    width: 100%;
+    height: auto;
+    @include backgroundImage(cover);
+    background-image: url('../assets/images/banner__SE.png'); 
+    margin: 70px auto 60px;
+  }
+
+  &__container {
+    padding: 160px 0 180px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include tabletScreen {
+      padding: 100px 0 100px 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 108%;
+    letter-spacing: 0.025em;
+    color: color(white);
+    text-shadow: 4px 2px 3px rgba(18, 18, 18, 0.68);
+    max-width: 680px;
+
+    @include tabletScreen {
+      font-size: 60px;
+    }
+
+    @include phoneScreen {
+      font-size: 45px;
+      font-weight: 600;
+    }
+
+    @include SEScreen {
+      font-size: 45px;
+      font-weight: 500;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 136.5%;
+    letter-spacing: 0.02em;
+    color: color(white);
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.51);
+    max-width: 500px;
+    padding: 20px 0 75px 0;
+
+    @include tabletScreen {
+      font-size: 25px;
+      padding: 15px 0 70px 0;
+    }
+    @include phoneScreen {
+      font-size: 18px;
+      letter-spacing: 2.5%;
+      font-weight: normal;
+    }
+  }
+
+  &__btn-box {
+    position: relative;
+
+    &::after {
+      content:'';
+      position: absolute;
+      bottom: -140px;
+      width: 815px;
+      height: 100px;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/btn_line.png');
+
+      @include tabletScreen {
+        bottom: -85px;
+        width: 635px;
+      }
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    color: color(white);
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 168px;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 480px;
+    position: relative;
+
+    &:hover {
+      background-color: color(green);
+      transition: 0.3s;
+      border-color: color(green);
+    }
+
+    @include tabletScreen {
+      width: 350px;
+      padding: 18px 0;
+      border-radius: 8px;
+    }
+
+    @include phoneScreen {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 280px;
+    left: 95%;
+
+    &::after,
+    &:before {
+      content: '';
+      background-color: #1BC47D;
+      position: absolute;
+      width: 3px;
+      height: 130px;
+      right: 38%;
+    }
+
+    &::after {
+      bottom: -140px;
+    }
+
+    &:before {
+      top: -140px;
+    }
+
+    @include tabletScreen {
+      display: none;
+    }
+  }
+
+  .icon__size {
+    width: 28px;
+  }
+
+  &__icon {
+    margin: 8px 0;
+    width: 35px;
+  }
+}

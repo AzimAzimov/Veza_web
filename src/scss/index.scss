@@ -1,0 +1,11 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import './utils/_variables';
+@import './utils/_mixins';
+@import './utils/_global';
+@import '../sections/header/header';
+@import '../sections/banner/banner';
+@import '../sections/about/about';
+@import '../sections/news/news';
+@import '../sections/gallery/gallery';
+@import '../sections/footer/footer';
+
